@@ -2768,7 +2768,7 @@ class upload {
                                     if (substr(PHP_OS, 0, 3) == 'WIN') {
                                         $path = realpath(ini_get('extension_dir') . '/../') . 'extras/magic';
                                     } else {
-                                        $path = '/usr/share/file/magic';
+                                        $path = null; // fallback to default path
                                     }
                                     $this->log .= '&nbsp;&nbsp;&nbsp;&nbsp;MAGIC path defaults to ' . $path . '<br />';
                                 } else {
